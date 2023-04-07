@@ -1,0 +1,5 @@
+#!/bin/sh
+brightness=$(brightnessctl g ) 
+brightness_percentage=$(expr $brightness / 1200)
+killall dunst
+notify-send -i /usr/share/icons/Win11-dark/status@2x/24/display-brightness-symbolic.svg " Brightness " " $brightness_percentage% "
